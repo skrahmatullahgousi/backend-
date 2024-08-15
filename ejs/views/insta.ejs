@@ -1,0 +1,17 @@
+<%- include("includes/head") %>
+<body>
+   <h2>this page belongs @to<%= instadata.name%></h2>
+   <h3><button>follow</button></h3>
+   <h3><button>comment</button></h3>
+    <h3>Accounts that follow you</h3>
+   <p>the no of follwers <%=instadata.followers%> &nbsp &nbsp &nbsp</p>
+   <p>the no of follwing <%=instadata.following%></p>
+<hr />  
+<% for(let post of instadata.posts){ %>
+ <img src="<%=post.image %>" alt="some img">
+ <p>the no of likes <%=post.likes%> &nbsp &nbsp &nbsp</p>
+ <p>the no of comments <%=post.comments%></p>
+<%}%>
+<script src="/app.js"></script>
+</body>
+</html>
